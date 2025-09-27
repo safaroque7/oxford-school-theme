@@ -1,0 +1,40 @@
+<?php
+//for title
+add_theme_support('title-tag');
+
+// customizer
+include_once get_template_directory() . '/includes/customizer/npa-customizer.php';
+
+//css and js file
+include_once get_template_directory() . '/includes/School-Theme-css-js.php';
+
+//navbar register
+include_once get_template_directory() . '/includes/School-Theme-navbar-register.php';
+
+//adding class on menu li a
+include_once get_template_directory() . '/includes/add-class-primary-menu-li-a.php';
+
+//nav walker
+include_once get_template_directory() . '/includes/class-wp-bootstrap-5.3.7-navwalker.php';
+
+//committee
+require_once get_template_directory() . '/includes/committee/committee-post-type.php';
+
+//gallery
+require_once get_template_directory() . '/includes/gallery/gallery-post-type.php';
+
+//banner
+require_once get_template_directory() . '/includes/banner/banner-post-type.php';
+
+//notice
+require_once get_template_directory() . '/includes/notice/notice-post-type.php';
+
+//institute_history
+require_once get_template_directory() . '/includes/institute_history/institute-history-post-type.php';
+
+//speech_of_headmaster
+require_once get_template_directory() . '/includes/speech_of_headmaster/speech-of-headmaster-post-type.php';
+
+add_theme_support('title-tag');
+
+add_theme_support('post-thumbnails');

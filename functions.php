@@ -35,9 +35,6 @@ require_once get_template_directory() . '/includes/institute_history/institute-h
 //speech_of_headmaster
 require_once get_template_directory() . '/includes/speech_of_headmaster/speech-of-headmaster-post-type.php';
 
-//Important Link
-require_once get_template_directory() . '/includes/important_link/important-link-post-type.php';
-
 //Founder Story
 require_once get_template_directory() . '/includes/founder_story/founder-story-post-type.php';
 

@@ -1,6 +1,6 @@
 <?php
-//for title
-add_theme_support('title-tag');
+// after setup theme
+include_once get_template_directory() . '/includes/after-setup-theme.php';
 
 // customizer
 include_once get_template_directory() . '/includes/customizer/npa-customizer.php';
@@ -35,6 +35,4 @@ require_once get_template_directory() . '/includes/institute_history/institute-h
 //speech_of_headmaster
 require_once get_template_directory() . '/includes/speech_of_headmaster/speech-of-headmaster-post-type.php';
 
-add_theme_support('title-tag');
-
-add_theme_support('post-thumbnails');
+require_once get_template_directory() . '/includes/english-to-bangla-date.php';

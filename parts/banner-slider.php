@@ -20,8 +20,9 @@
         <?php
         $j = 0;
         $banner = new WP_Query(array(
-            'post_type' => 'banner',
-            'order'     => 'ASC'
+            'post_type'         => 'banner',
+            'posts_per_page'    =>  10,
+            'order'             => 'DESC'
         ));
         while ($banner->have_posts()): $banner->the_post();
         ?>
@@ -29,16 +30,21 @@
                 <a href="<?php echo get_permalink(); ?>">
 
                     <?php
+                    $thumb_id = get_post_thumbnail_id(get_the_ID());
+                    $alt_text = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                     if (has_post_thumbnail()) {
-                        the_post_thumbnail('large', array('class' => 'img-fluid'));
+                        the_post_thumbnail('banner-image-size-856x460', array(
+                            'class' => 'img-fluid',
+                            'alt'   => $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title())
+                        ));
                     } else { ?>
-                        <img src="<?php echo get_template_directory_uri() . '/images/banner-demo-image.png' ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . '/images/banner-demo-image-856x460.jpg' ?>" alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>">
                     <?php }
 
                     ?>
                 </a>
                 <a href="<?php echo get_permalink(); ?>" class="carousel-content position-absolute d-block bottom-0 z-1 w-100 p-2">
-                    <p class="mb-0 text-light"><?php echo get_field('image_caption'); ?></p>
+                    <p class="mb-0 text-light"><?php the_title(); ?></p>
                 </a>
             </div>
         <?php
@@ -47,18 +53,17 @@
         wp_reset_postdata();
         ?>
     </div>
-    <?php if ($banner->post_count > 1): ?>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true">
-                <i class="fa-solid fa-angle-left"></i>
-            </span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true">
-                <i class="fa-solid fa-angle-right"></i>
-            </span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    <?php endif; ?>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true">
+            <i class="fa-solid fa-angle-left"></i>
+        </span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true">
+            <i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>

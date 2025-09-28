@@ -85,6 +85,7 @@ body {
   left: initial;
   right: 1rem !important;
   margin: 0 !important;
+  height: fit-content;
 }
 .carousel-1 .carousel-indicators [data-bs-target],
 .carousel-2 .carousel-indicators [data-bs-target],
@@ -183,7 +184,7 @@ body {
 .carousel-3 .carousel-control-next-icon i {
   font-size: 1.3rem;
   color: black !important;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 .carousel-1 .carousel-control-prev-icon i,
 .carousel-1 .carousel-control-next-icon i {
@@ -199,21 +200,20 @@ body {
   height: 50px;
 }
 .carousel-3 .carousel-indicators {
-  bottom: -2.2rem;
+  bottom: -3.2rem;
 }
 .notice-content p {
   text-align: justify;
 }
-.list-group-item:hover {
-  background: #0e758a !important;
-  color: white;
+.list-group-item h5 a:hover {
+  text-decoration: underline;
 }
 .list-group-two {
-  max-height: 310px;
+  max-height: 503px;
   overflow: auto;
 }
 .list-group-three {
-  max-height: 380px !important;
+  max-height: 422px !important;
 }
 .list-group-two::-webkit-scrollbar {
   width: 5px;

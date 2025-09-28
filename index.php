@@ -4,21 +4,8 @@
  * Template Name: Template Home
  */
 
-//banner start
-get_template_part('parts/banner');
-
-//history part
-get_template_part('parts/history');
-
-//committee part
-get_template_part('parts/committee');
-
-?>
-
-<div class="container bg-light">
-    <?php  //gallery part
-    get_template_part('parts/gallery');
-    ?>
-</div>
-
-<?php get_footer(); ?>
+get_template_part('parts/banner-notice');
+get_template_part('parts/founder-history-news-event');
+get_template_part('parts/form-committee-important-links');
+get_template_part('parts/gallery');
+get_footer();

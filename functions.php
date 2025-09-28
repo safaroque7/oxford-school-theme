@@ -48,3 +48,14 @@ require_once get_template_directory() . '/includes/important-link-post-type.php'
 
 //for creating auto pages
 require_once get_template_directory() . '/includes/after_switch_theme.php';
+
+
+//for class-tgm-plugin-activation
+if (file_exists(get_template_directory() . '/includes/class-tgm-plugin-activation.php')) {
+    include_once('includes/class-tgm-plugin-activation.php');
+}
+
+//for tgm
+if (file_exists(get_template_directory() . '/includes/tgm.php')) {
+    include_once('includes/tgm.php');
+}

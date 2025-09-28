@@ -6,7 +6,7 @@
     $notice = new WP_Query(
         array(
             'post_type' =>  'notice',
-            'order'     => 'ASC'
+            'order'     => 'DESC'
         )
     );
     while ($notice->have_posts()): $notice->the_post();

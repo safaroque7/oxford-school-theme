@@ -106,23 +106,28 @@
 
                     <ul class="list-group list-group-two">
                         <?php
-                        $important_link_query = new WP_Query(array(
-                            'post_type'         =>  'important_link',
-                            'posts_per_page'    =>  -1,
-                            'order'             =>  'ASC'
-                        ));
-                        while ($important_link_query->have_posts()): $important_link_query->the_post();
+                            $importantLink = new WP_Query(array(
+                                'post_type'         =>  'important_link',
+                                'order'             => 'DESC'
+                            ));
+                            while ($importantLink->have_posts()): $importantLink->the_post();
                         ?>
-                            <li>
-                                <?php $important_link = get_field('important_link'); ?>
-                                <a href="<?php echo !empty($important_link) ? esc_url($important_link) : '#'; ?>" class="list-group-item" target="_blank">
-                                    <?php the_title(); ?>
-                                </a>
 
-                            </li>
+                        <li>
+                            <?php 
+                                $link = get_field('important_link'); 
+                                if( $link ): 
+                            ?>
+                                <a href="<?php echo esc_url( $link ); ?>" class="list-group-item" target="_blank"><?php the_title(); ?></a>
+                            <?php 
+                                endif; 
+                            ?>
+                        </li>
 
-                        <?php endwhile;
-                        wp_reset_postdata(); ?>
+                        <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        ?>
 
                     </ul>
                 </div>

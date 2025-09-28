@@ -56,9 +56,6 @@ body {
   transform: rotate(180deg);
   transition: 0.3s ease-in-out;
 }
-.nav-link:hover {
-  background-color: rgb(12, 128, 163);
-}
 .dropdown-menu.show {
   left: -0.6rem;
   top: 2.5rem;
@@ -72,7 +69,6 @@ body {
   border: none;
   padding: 0rem;
   padding-top: 0.5rem;
-  background-color: rgb(12, 128, 163);
 }
 .navbar-toggler {
   box-shadow: none !important;
@@ -278,13 +274,6 @@ iframe {
   max-height: 200px !important;
 }
 
-.current-menu-item > a {
-  background: red;
-  border: none !important;
-}
-.current-menu-item > a:hover {
-  background: rgb(214, 0, 0);
-}
 .dropdown-menu {
   padding-top: 0rem;
 }

@@ -13,6 +13,13 @@
             border-right: 1px solid <?php echo get_theme_mod('menubar_right_border_color', '#1296B1;'); ?> !important;
             border-left: 1px solid <?php echo get_theme_mod('menubar_left_border_color', '#067b92ff;'); ?> !important;
         }
+
+        .dropdown-menu,
+        .current-menu-item>a,
+        .current-menu-item>a:hover,
+        .nav-link:hover {
+            background-color: <?php echo get_theme_mod('npa-menu-hover-bg-color', '#ff0000'); ?> !important;
+        }
     </style>
 
     <?php wp_head(); ?>

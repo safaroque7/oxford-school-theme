@@ -36,3 +36,9 @@ require_once get_template_directory() . '/includes/institute_history/institute-h
 require_once get_template_directory() . '/includes/speech_of_headmaster/speech-of-headmaster-post-type.php';
 
 require_once get_template_directory() . '/includes/english-to-bangla-date.php';
+
+//important-link-post-type
+require_once get_template_directory() . '/includes/important-link-post-type.php';
+
+//for creating auto pages
+require_once get_template_directory() . '/includes/after_switch_theme.php';

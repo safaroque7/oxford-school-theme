@@ -102,19 +102,28 @@
                     <div class="sec-title bg-info text-center py-1 text-light mb-2">
                         <p class="mb-0">গুরুত্বপূর্ণ লিংক</p>
                     </div>
+
+
                     <ul class="list-group list-group-two">
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">স্কুল একাডেমিক ক্যালেন্ডার</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">১ম-৫ম শ্রেণীর ক্লাস রূটিন</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">৬ষ্ঠ-১০ম শ্রেণীর ক্লাস রূটিন</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">উপস্থিতি বিবরণী</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">ডিজিটাল কন্টেন্ট ও প্রকাশনা</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
-                        <li><a href="<?php echo get_permalink(); ?>" class="list-group-item">প্রয়োজনীয় ফরম ডাউনলোড</a></li>
+                        <?php
+                        $important_link_query = new WP_Query(array(
+                            'post_type'         =>  'important_link',
+                            'posts_per_page'    =>  -1,
+                            'order'             =>  'ASC'
+                        ));
+                        while ($important_link_query->have_posts()): $important_link_query->the_post();
+                        ?>
+                            <li>
+                                <?php $important_link = get_field('important_link'); ?>
+                                <a href="<?php echo !empty($important_link) ? esc_url($important_link) : '#'; ?>" class="list-group-item" target="_blank">
+                                    <?php the_title(); ?>
+                                </a>
+
+                            </li>
+
+                        <?php endwhile;
+                        wp_reset_postdata(); ?>
+
                     </ul>
                 </div>
             </div>

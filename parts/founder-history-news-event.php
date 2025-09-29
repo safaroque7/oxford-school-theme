@@ -11,46 +11,46 @@
                     </div>
 
                     <?php
-                        $founderStory = new WP_Query(array(
-                                'post_type'         =>  'founder_story',
-                                'order'             => 'DESC',
-                                'posts_per_page'    => 1
-                        ));
-                        while ($founderStory->have_posts()): $founderStory->the_post();
+                    $founderStory = new WP_Query(array(
+                        'post_type'         =>  'founder_story',
+                        'order'             => 'DESC',
+                        'posts_per_page'    => 1
+                    ));
+                    while ($founderStory->have_posts()): $founderStory->the_post();
                     ?>
 
-                    <div class="sec-img-content position-relative">
-                        <a href="<?php echo get_permalink(); ?>">
-                            <?php the_post_thumbnail('large', array('class' => 'img-fluid w-100')); ?>
-                        </a>
-                        <a href="<?php echo get_permalink(); ?>" class="sec-text-content position-absolute bottom-0 z-1 w-100 p-2 start-0">
-                            <p class="mb-0 text-light"><?php the_title(); ?></p>
-                        </a>
-                    </div>
+                        <div class="sec-img-content position-relative">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail('large', array('class' => 'img-fluid w-100')); ?>
+                            </a>
+                            <a href="<?php the_permalink(); ?>" class="sec-text-content position-absolute bottom-0 z-1 w-100 p-2 start-0">
+                                <p class="mb-0 text-light"><?php the_title(); ?></p>
+                            </a>
+                        </div>
 
                     <?php
-                        endwhile;
-                        wp_reset_postdata();
+                    endwhile;
+                    wp_reset_postdata();
                     ?>
 
                 </div>
                 <div class="second-bottom">
                     <ul class="list-group list-group-two list-group-three">
                         <?php
-                            $moreLink = new WP_Query(
-                                array(
-                                    'post_type' =>  'more_link',
-                                    'order'     => 'DESC'
-                                )
-                            );
-                            while ($moreLink->have_posts()): $moreLink->the_post();
+                        $moreLink = new WP_Query(
+                            array(
+                                'post_type' =>  'more_link',
+                                'order'     => 'DESC'
+                            )
+                        );
+                        while ($moreLink->have_posts()): $moreLink->the_post();
                         ?>
                             <li>
                                 <a href="<?php the_permalink(); ?>" class="list-group-item bg-info text-light"><?php the_title(); ?></a>
                             </li>
                         <?php
-                            endwhile;
-                            wp_reset_postdata();
+                        endwhile;
+                        wp_reset_postdata();
                         ?>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@
                                 $trimingWords = WP_trim_words($contentText, 50, '...');
                                 echo $trimingWords;
                                 ?>
-                                <a href="<?php echo get_permalink(); ?>" class="text-danger">বিস্তারিত</a>
+                                <a href="<?php the_permalink(); ?>" class="text-danger">বিস্তারিত</a>
                             </p>
                         <?php
                         endwhile;
@@ -91,47 +91,42 @@
             </div>
 
             <!-- নিউজ ও ইভেন্ট -->
-            <div class="col-md-4 col-lg-4">
+            <div class="col-md-4 col-12">
                 <div class="sec-title bg-info text-center py-1 text-light mb-2">
                     <p class="mb-0">নিউজ ও ইভেন্ট</p>
                 </div>
 
 
                 <div id="carouselExampleIndicatorsThree" class="carousel slide carousel-3" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <?php
-                                $i = 0;
-                                $news_and_event = new WP_Query(array(
-                                    'cat'       => 14,
-                                    'posts_per_page'    =>  10,
-                                    'order'     => 'DESC'
-                                ));
-                                while ($news_and_event->have_posts()): $news_and_event->the_post();
-                            ?>
+                    <div class="carousel-indicators">
+                        <?php
+                        $i = 0;
+                        $news_and_event = new WP_Query(array(
+                            'cat'               => 18,
+                            'posts_per_page'    =>  10,
+                            'order'             => 'DESC'
+                        ));
+                        while ($news_and_event->have_posts()): $news_and_event->the_post();
+                        ?>
                             <button type="button" data-bs-target="#carouselExampleIndicatorsThree" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo $i == 0 ? 'active' : ''; ?>"></button>
-                            <?php
-                                $i++;
-                                endwhile;
-                                wp_reset_postdata();
-                            ?>
-                        </div>
+                        <?php
+                            $i++;
+                        endwhile;
+                        wp_reset_postdata();
+                        ?>
+                    </div>
 
 
-                        <div class="carousel-inner">
+                    <div class="carousel-inner">
 
-                            <?php
-                                $j = 0;
-                                $news_and_event = new WP_Query(array(
-                                    'cat'               => 14,
-                                    'posts_per_page'    =>  10,
-                                    'order'             => 'DESC'
-                                ));
-                                while ($news_and_event->have_posts()): $news_and_event->the_post();
-                            ?>
+                        <?php
+                        $j = 0;
+                        while ($news_and_event->have_posts()): $news_and_event->the_post();
+                        ?>
 
                             <div class="carousel-item <?php echo $j == 0 ? 'active' : ''; ?>">
-                                <div class="notice-title text-center text-danger py-1 mb-3">
-                                    <a href="<?php echo get_permalink(); ?>" class="text-danger d-block">
+                                <div class="notice-title text-center text-danger mb-2">
+                                    <a href="<?php the_permalink(); ?>" class="text-danger d-block">
 
                                         <?php
                                         $thumb_id = get_post_thumbnail_id(get_the_ID());
@@ -151,32 +146,32 @@
                                 </div>
                             </div>
 
-                            <?php
-                                $j++;
-                                endwhile;
-                                wp_reset_postdata();
-                            ?>
+                        <?php
+                            $j++;
+                        endwhile;
+                        wp_reset_postdata();
+                        ?>
 
-                        </div>
+                    </div>
 
 
-                        <button class="carousel-control-prev d-flex justify-content-center align-items-end" type="button" data-bs-target="#carouselExampleIndicatorsThree" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next d-flex justify-content-center align-items-end" type="button" data-bs-target="#carouselExampleIndicatorsThree" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true">
-                                <i class="fa-solid fa-angle-right"></i>
-                            </span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                
+                    <button class="carousel-control-prev d-flex justify-content-center align-items-end" type="button" data-bs-target="#carouselExampleIndicatorsThree" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next d-flex justify-content-center align-items-end" type="button" data-bs-target="#carouselExampleIndicatorsThree" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+
             </div>
-
         </div>
-</div>
-</section>
-<!-- history end -->
+    </section>
+    <!-- history end -->
 </div>

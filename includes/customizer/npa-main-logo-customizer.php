@@ -7,8 +7,8 @@
  */
 $wp_customize->add_section('
 _option', array(
-  'title' => __('Main Logo Position Option', 'npa'),
-  'Description' => __('If you are intersted to change menu position, you can do here', 'npa'),
+  'title' => __('Main Logo Position Option', 'school-theme'),
+  'Description' => __('If you are intersted to change menu position, you can do here', 'school-theme'),
 ));
 $wp_customize->add_setting('npa_main_logo_position', array(
   'default' => 'npa_left_logo',

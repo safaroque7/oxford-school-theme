@@ -1,7 +1,7 @@
 <?php
 //Social Media Link
 $wp_customize->add_section('npa_social_media', array(
-  'title'         =>  __('Social Media Links', 'npa'),
+  'title'         =>  __('Social Media Links', 'school-theme'),
   'description'   => __('If you want to update social media links, you can do it here.')
 ));
 
@@ -13,7 +13,7 @@ $wp_customize->add_setting($npa_social_media_1, array(
   'transport' => 'postMessage'
 ));
 $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, $npa_social_media_1, array(
-  'label'         => __('Facebook', 'npa'),
+  'label'         => __('Facebook', 'school-theme'),
   'description'   => __('Paste Facebook link here'),
   'settings'      => $npa_social_media_1,
   'section'       => 'npa_social_media',
@@ -29,7 +29,7 @@ $wp_customize->add_setting($npa_social_media_2, array(
   'transport' => 'postMessage',
 ));
 $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, $npa_social_media_2, array(
-  'label'         => __('Twitter', 'npa'),
+  'label'         => __('Twitter', 'school-theme'),
   'description'   => __('Paste Twitter link here'),
   'settings'      => $npa_social_media_2,
   'section'       => 'npa_social_media',
@@ -44,7 +44,7 @@ $wp_customize->add_setting($npa_social_media_3, array(
   'transport' => 'postMessage'
 ));
 $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, $npa_social_media_3, array(
-  'label'         => __('Youtube', 'npa'),
+  'label'         => __('Youtube', 'school-theme'),
   'description'   => __('Paste Youtube link here'),
   'settings'      => $npa_social_media_3,
   'section'       => 'npa_social_media',

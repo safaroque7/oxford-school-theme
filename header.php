@@ -6,19 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .menubar-bg-color {
-            background-color: <?php echo get_theme_mod('menubar_background_color', '#1296B1;'); ?>
+            background-color: <?php echo get_theme_mod('npa-menubar-bg-text-color-setting', '#1296B1;'); ?>;
+            color: <?php echo get_theme_mod('npa-menubar-text-color-setting', '#ffffff;'); ?> !important;
+        }
+
+        #menu-primary-menu li a {
+            color: <?php echo get_theme_mod('npa-menubar-text-color-setting', '#ffffff;'); ?>;
         }
 
         .custom-border {
-            border-right: 1px solid <?php echo get_theme_mod('menubar_right_border_color', '#1296B1;'); ?> !important;
-            border-left: 1px solid <?php echo get_theme_mod('menubar_left_border_color', '#067b92ff;'); ?> !important;
+            border-right: 1px solid <?php echo get_theme_mod('npa-menu-right-border', '#1296B1;'); ?> !important;
+            border-left: 1px solid <?php echo get_theme_mod('npa-menu-left-border', '#067b92ff;'); ?> !important;
         }
 
         .dropdown-menu,
         .current-menu-item>a,
         .current-menu-item>a:hover,
         .nav-link:hover {
-            background-color: <?php echo get_theme_mod('npa-menu-hover-bg-color', '#ff0000'); ?> !important;
+            background-color: <?php echo get_theme_mod('npa-menubar-active-background-setting', '#ff0000'); ?> !important;
+            color: <?php echo get_theme_mod('npa-menubar-active-text-setting', '#ffffff'); ?> !important;
+        }
+
+        .footer-bg-color {
+            background-color: <?php echo get_theme_mod('npa_footer_background_setting', '#1296B1;') ?>;
         }
     </style>
 

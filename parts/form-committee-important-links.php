@@ -28,12 +28,12 @@
             </div>
             <div class="col-lg-5">
                 <div class="sec-title bg-danger text-center py-1 text-light mb-3">
-                    <p class="mb-0">বর্তমান কমিটি</p>
+                    <p class="mb-0">ম্যানেজিং কমিটি</p>
                 </div>
                 <div class="row">
                     <?php
                     $committee = new WP_Query(array(
-                        'post_type'         =>  'committee',
+                        'post_type'         => 'committee',
                         'posts_per_page'    => 1,
                         'order'             => 'ASC'
                     ));
@@ -59,7 +59,7 @@
                     ?>
 
                 </div>
-                <a href="<?php echo get_permalink(); ?>" class="text-secondary hover-underline">পূর্ণাঙ্গ কমিটি</a>
+                <a href="<?php the_permalink(); ?>" class="text-secondary hover-underline">পূর্ণাঙ্গ কমিটি</a>
                 <div class="bottom-profile mt-3">
                     <div class="sec-title bg-danger text-center py-1 text-light mb-3">
                         <p class="mb-0">প্রধান শিক্ষকের বাণী</p>
@@ -85,7 +85,7 @@
                                             $trimingHeadWords = WP_trim_words($headText, 40, '...');
                                             echo $trimingHeadWords;
                                             ?>
-                                            <a href="<?php echo get_permalink(); ?>" class="text-danger">বিস্তারিত</a>
+                                            <a href="<?php the_permalink(); ?>" class="text-danger">বিস্তারিত</a>
                                         </p>
                                     </div>
                                 </div>
@@ -106,27 +106,27 @@
 
                     <ul class="list-group list-group-two">
                         <?php
-                            $importantLink = new WP_Query(array(
-                                'post_type'         =>  'important_link',
-                                'order'             => 'DESC'
-                            ));
-                            while ($importantLink->have_posts()): $importantLink->the_post();
+                        $importantLink = new WP_Query(array(
+                            'post_type'         =>  'important_link',
+                            'order'             => 'DESC'
+                        ));
+                        while ($importantLink->have_posts()): $importantLink->the_post();
                         ?>
 
-                        <li>
-                            <?php 
-                                $link = get_field('important_link'); 
-                                if( $link ): 
-                            ?>
-                                <a href="<?php echo esc_url( $link ); ?>" class="list-group-item" target="_blank"><?php the_title(); ?></a>
-                            <?php 
-                                endif; 
-                            ?>
-                        </li>
+                            <li>
+                                <?php
+                                $link = get_field('important_link');
+                                if ($link):
+                                ?>
+                                    <a href="<?php echo esc_url($link); ?>" class="list-group-item" target="_blank"><?php the_title(); ?></a>
+                                <?php
+                                endif;
+                                ?>
+                            </li>
 
                         <?php
-                            endwhile;
-                            wp_reset_postdata();
+                        endwhile;
+                        wp_reset_postdata();
                         ?>
 
                     </ul>

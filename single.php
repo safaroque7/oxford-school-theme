@@ -1,9 +1,4 @@
-<?php
-get_header();
-/**
- * Template Name: Template Single
- */
-?>
+<?php get_header(); ?>
 
 <!-- body start -->
 <div class="container bg-light py-3 pb-3">

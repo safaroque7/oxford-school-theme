@@ -14,7 +14,7 @@ $wp_customize->add_setting('npa_meta_keywords_setting', array(
 ));
 
 $wp_customize->add_control('npa_meta_keywords_setting', array(
-  'label'         => esc_html__('Meta Keywords', 'npa'),
+  'label'         => esc_html__('Meta Keywords', 'school-theme'),
   'description'   => esc_html__('Meta Keywords Paste Here'),
   'settings'      => 'npa_meta_keywords_setting',
   'section'       => 'npa_meta_keywords',

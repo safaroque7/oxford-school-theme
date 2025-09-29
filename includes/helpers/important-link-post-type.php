@@ -4,7 +4,7 @@ function important_link_post_type()
 {
     register_post_type('important_link', array(
         'labels'                => array(
-            'name'              => __('Important Link', 'School-Theme'),
+            'name'              => __('গুরুত্বপূর্ণ লিংক', 'school-theme'),
             'singular_name'         => 'Important Link Item',
             'add_new_item'          => 'Add New Important Link Item',
             'edit_item'             => 'Edit Important Link Item',

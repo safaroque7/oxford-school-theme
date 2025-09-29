@@ -35,9 +35,7 @@ li {
 body {
   background-color: #00d5ff3a;
 }
-.container {
-  background-color: white !important;
-}
+
 .menu-list li {
   cursor: pointer;
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 
  * ======================================================================
@@ -17,7 +18,7 @@ $rjs_choices_list = [];
 
 //Loop through the array and add the correct values every time
 foreach ($rjs_categories_full_list as $rjs_single_cat) {
-  $rjs_choices_list[$rjs_single_cat->term_id] = esc_html__($rjs_single_cat->name, 'npa');
+  $rjs_choices_list[$rjs_single_cat->term_id] = esc_html__($rjs_single_cat->name, 'school-theme');
 }
 
 //Register the setting

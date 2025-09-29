@@ -3,7 +3,7 @@
         <?php
         $i = 0;
         $banner = new WP_Query(array(
-            'post_type' => 'banner',
+            'post_type' => 'slider',
             'order'     => 'ASC'
         ));
         while ($banner->have_posts()): $banner->the_post();
@@ -20,14 +20,14 @@
         <?php
         $j = 0;
         $banner = new WP_Query(array(
-            'post_type'         => 'banner',
+            'post_type'         => 'slider',
             'posts_per_page'    =>  10,
             'order'             => 'DESC'
         ));
         while ($banner->have_posts()): $banner->the_post();
         ?>
             <div class="carousel-item <?php echo $j == 0 ? 'active' : ''; ?>">
-                <a href="<?php echo get_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>">
 
                     <?php
                     $thumb_id = get_post_thumbnail_id(get_the_ID());
@@ -43,7 +43,7 @@
 
                     ?>
                 </a>
-                <a href="<?php echo get_permalink(); ?>" class="carousel-content position-absolute d-block bottom-0 z-1 w-100 p-2">
+                <a href="<?php the_permalink(); ?>" class="carousel-content position-absolute d-block bottom-0 z-1 w-100 p-2">
                     <p class="mb-0 text-light"><?php the_title(); ?></p>
                 </a>
             </div>

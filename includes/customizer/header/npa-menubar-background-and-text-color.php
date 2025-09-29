@@ -84,16 +84,3 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'npa-me
   'settings'  => 'npa-menu-right-border',
   'section'   => 'npa-menubar-bg-text-color',
 )));
-
-
-// hover
-$wp_customize->add_setting('npa-menu-hover-bg-color', array(
-  'default'   => '#ff0000',
-  'transport' => 'refresh',
-));
-
-$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'npa-menu-hover-bg-color', array(
-  'label'     => 'Main menu hover background color',
-  'settings'  => 'npa-menu-hover-bg-color',
-  'section'   => 'npa-menubar-bg-text-color',
-)));

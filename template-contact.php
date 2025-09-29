@@ -6,7 +6,7 @@
 
 <!-- body start -->
 <div class="container bg-light py-3">
-    <?php get_template_part('includes/helpers/breadcumbs'); ?>
+    <?php get_template_part('includes/parts/breadcumbs'); ?>
     <section class="banner-section">
         <div class="row mb-md-4 mb-2">
             <div class="col-lg-8 mb-3">

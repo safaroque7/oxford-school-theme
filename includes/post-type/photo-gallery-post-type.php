@@ -2,7 +2,7 @@
 
 function gallery_post_type()
 {
-    register_post_type('gallery', array(
+    register_post_type('photo_gallery', array(
         'labels'                => array(
             'name'              => __('ফটো গ্যালারি', 'school-theme'),
 

@@ -44,7 +44,7 @@
                     ?>
                 </a>
                 <a href="<?php the_permalink(); ?>" class="carousel-content position-absolute d-block bottom-0 z-1 w-100 p-2">
-                    <p class="mb-0 text-light"><?php the_title(); ?></p>
+                    <p class="mb-0 text-light text-center"><?php the_title(); ?></p>
                 </a>
             </div>
         <?php

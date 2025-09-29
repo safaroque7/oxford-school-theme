@@ -7,7 +7,7 @@
 <div class="container bg-white">
 
 
-    <?php get_template_part('includes/helpers/breadcumbs'); ?>
+    <?php get_template_part('includes/parts/breadcumbs'); ?>
 
 
     <div class="row">

@@ -119,8 +119,6 @@ function oxford_school_theme_setup_default_content()
 
     // === ২. ডিফল্ট ক্যাটাগরি তৈরি ===
     $categories = array(
-        'স্লাইডার',
-        'নোটিশ',
         'নিউজ ও ইভেন্টস',
     );
 

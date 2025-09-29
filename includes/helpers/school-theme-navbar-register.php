@@ -1,8 +1,11 @@
-<?php 
+<?php
 
-    function School_Theme_navbar_register():void{
-        register_nav_menus(array(
-            'primary-menu' => __('Primary Menu', 'chool-Theme'),
-        ));
-    }
-    add_action('init', 'School_Theme_navbar_register');
+function school_theme_register_navbar()
+{
+    //register_nav_menus
+    register_nav_menus(array(
+        'primary-menu' => __('Primary Menu', 'school-theme'),
+        'policy-menu'  => __('Policy Menu', 'school-theme'),
+    ));
+};
+add_action('init', 'school_theme_register_navbar');

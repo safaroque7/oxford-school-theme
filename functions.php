@@ -9,7 +9,7 @@ include_once get_template_directory() . '/includes/customizer/npa-customizer.php
 include_once get_template_directory() . '/includes/helpers/school-theme-css-js.php';
 
 //navbar register
-include_once get_template_directory() . '/includes/helpers/School-Theme-navbar-register.php';
+include_once get_template_directory() . '/includes/helpers/school-theme-navbar-register.php';
 
 //adding class on menu li a
 include_once get_template_directory() . '/includes/helpers/add-class-primary-menu-li-a.php';
@@ -44,7 +44,7 @@ require_once get_template_directory() . '/includes/helpers/english-to-bangla-dat
 require_once get_template_directory() . '/includes/helpers/important-link-post-type.php';
 
 //for creating auto pages
-require_once get_template_directory() . '/includes/helpers/after_switch_theme.php';
+require_once get_template_directory() . '/includes/helpers/after-switch-theme.php';
 
 
 //for class-tgm-plugin-activation
@@ -55,4 +55,14 @@ if (file_exists(get_template_directory() . '/includes/class-tgm-plugin-activatio
 //for tgm
 if (file_exists(get_template_directory() . '/includes/tgm.php')) {
     include_once('includes/tgm.php');
+}
+
+//for tgm
+if (file_exists(get_template_directory() . '/includes/post-type/teachers-information-post-type.php')) {
+    include_once('includes/post-type/teachers-information-post-type.php');
+}
+
+//for tgm
+if (file_exists(get_template_directory() . '/includes/helpers/enter-title-name.php')) {
+    include_once('includes/helpers/enter-title-name.php');
 }

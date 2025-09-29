@@ -102,7 +102,7 @@
                         <?php
                         $i = 0;
                         $news_and_event = new WP_Query(array(
-                            'cat'               => 18,
+                            'cat'               => 22,
                             'posts_per_page'    =>  10,
                             'order'             => 'DESC'
                         ));

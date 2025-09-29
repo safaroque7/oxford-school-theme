@@ -4,14 +4,11 @@
  */
 ?>
 
-<div class="container bg-white">
+<div class="container bg-light py-3">
 
-
-    <?php get_template_part('includes/parts/breadcumbs'); ?>
-
+    <?php get_template_part('/parts/breadcumbs'); ?>
 
     <div class="row">
-
 
         <?php
         $teacher_information = new WP_Query(array(
@@ -28,7 +25,7 @@
                     <div class="card-header">
                         <?php
                         if (has_post_thumbnail()) {
-                            the_post_thumbnail('large', array('class' => 'img-fluid'));
+                            the_post_thumbnail('teacher-photo-image-290x350', array('class' => 'img-fluid'));
                         } else { ?>
                             <img src="https://picsum.photos/290/350" alt="Teacher" class="img-fluid">
                         <?php }

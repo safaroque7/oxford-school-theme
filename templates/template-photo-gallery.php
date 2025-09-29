@@ -5,6 +5,8 @@
 ?>
 <!-- body start -->
 <div class="container bg-light py-3">
+    <?php get_template_part('/parts/breadcumbs'); ?>
+    
     <div class="committee-banner">
         <div class="text-center py-5 text-light banner-text">
             <h1>ফটো গ্যালারি</h1>
@@ -12,7 +14,7 @@
     </div>
     <section class="banner-section">
         <div class="row">
-            <div class="col-lg-8 mb-3">
+            <div class="col-md-8 col-12 mb-3">
                 <div class="top-title bg-info text-center text-light py-1 mb-2">
                     <p class="mb-0">সব ছবি</p>
                 </div>
@@ -51,12 +53,9 @@
 
 
             </div>
-            <div class="col-lg-4">
+            <div class="col-md-4 col-12">
                 <div class="top-content position-sticky" style="top: 1rem;">
-                    <?php
-                    //gallery part
-                    get_template_part('parts/notice');
-                    ?>
+                    <?php get_template_part('parts/notice'); ?>
                 </div>
             </div>
         </div>

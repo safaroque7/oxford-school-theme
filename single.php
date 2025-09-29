@@ -2,9 +2,9 @@
 
 <!-- body start -->
 <div class="container bg-light py-3 pb-3">
-    <?php get_template_part('includes/parts/breadcumbs'); ?>
+    <?php get_template_part('/parts/breadcumbs'); ?>
     <div class="row pb-5">
-        <div class="col-lg-8">
+        <div class="col-md-8">
             <?php
             if (have_posts()) : while (have_posts()) : the_post();
             ?>
@@ -19,7 +19,7 @@
                                 'alt'   => $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title())
                             ));
                         } else { ?>
-                <img src="<?php echo get_template_directory_uri() . '/images/banner-demo-image-856x460.jpg' ?>"
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/banner-demo-image-856x460.jpg' ?>"
                     alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>">
                 <?php }
                         ?>
@@ -45,7 +45,7 @@
             endif;
             ?>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
             <div class="top-content position-sticky" style="top : 1rem;">
                 <?php get_template_part('parts/notice') ?>
             </div>
@@ -120,7 +120,7 @@
                                             'alt'   => $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title())
                                         ));
                                     } else { ?>
-                                <img src="<?php echo get_template_directory_uri() . '/images/banner-demo-image-856x460.jpg' ?>"
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/banner-demo-image-856x460.jpg' ?>"
                                     alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>"
                                     class="img-fluid">
                                 <?php } ?>

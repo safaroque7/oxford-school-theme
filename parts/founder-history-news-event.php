@@ -166,7 +166,7 @@
                                                 'alt'   => $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title())
                                             ));
                                         } else { ?>
-                                            <img src="<?php echo get_template_directory_uri() . '/images/news-and-event-image-420x250.jpg' ?>" alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>" class="mb-md-2 mb-1 img-fluid">
+                                            <img src="<?php echo get_template_directory_uri() . '/assets/images/news-and-event-image-420x250.jpg' ?>" alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>" class="mb-md-2 mb-1 img-fluid">
                                         <?php } ?>
 
                                         <h5 class="text-dark"> <?php the_title(); ?> </h5>

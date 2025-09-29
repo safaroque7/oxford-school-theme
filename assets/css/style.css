@@ -2,12 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "sulaiman lipi";
 }
+
 @font-face {
-    font-family: sulaiman lipi;
-    src: url(../font/SolaimanLipi_20-04-07.ttf);
+  font-family: "SolaimanLipiNormal";
+  src: url("../fonts/solaimanlipi_20-04-07.eot");
+  src: url("../fonts/solaimanlipi_20-04-07.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/solaimanlipi_20-04-07.woff") format("woff"),
+       url("../fonts/solaimanlipi_20-04-07.ttf") format("truetype"),
+       url("../fonts/solaimanlipi_20-04-07.svg#SolaimanLipiNormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
+
+
+body {
+  font-family: "SolaimanLipiNormal", sans-serif;
+  line-height: 150%;
+}
+
 a{
     text-decoration: none;
 }
@@ -20,9 +33,7 @@ li{
 body{
     background-color: #00d5ff3a;
 }
-.container{
-    background-color: white !important;
-}
+
 .menu-list li{
     cursor: pointer;
 }
@@ -263,9 +274,19 @@ transition: all .2s ease-in-out;
 .modal-body img{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 iframe{
     height: 200px !important;
     max-height: 200px !important;
+}
+
+.not-found-font-size {
+    font-size: 200px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .not-found-font-size {
+        font-size: 50px;
+    }
 }

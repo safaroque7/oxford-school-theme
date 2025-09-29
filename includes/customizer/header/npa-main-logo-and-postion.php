@@ -12,7 +12,7 @@ $wp_customize->add_section('npa_header_area', array(
  */
 
 $wp_customize->add_setting('npa-main-logo', array(
-    'default' => get_bloginfo('template_directory') . '/images/main-logo.png',
+    'default' => get_bloginfo('template_directory') . '/assets/images/main-logo.png',
 ));
 $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'npa-main-logo', array(
     'label'        => __('Main Logo', 'school-theme'),

@@ -1,12 +1,13 @@
 <?php
     get_header();
     /**
-    * Template Name: Template Speech Of Headmaster
+    * Template Name: প্রধান শিক্ষকের বাণী
     */
 ?>
 
     <!-- body start -->
     <div class="container bg-light pt-3">
+        <?php get_template_part('/parts/breadcumbs'); ?>
         <div class="row pb-5">
             <div class="col-lg-8 mb-3">
                 <div class="sec-title bg-info text-center py-1 text-light mb-3">

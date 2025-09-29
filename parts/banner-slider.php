@@ -38,7 +38,7 @@
                             'alt'   => $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title())
                         ));
                     } else { ?>
-                        <img src="<?php echo get_template_directory_uri() . '/images/banner-demo-image-856x460.jpg' ?>" alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner-demo-image-856x460.jpg' ?>" alt="<?php echo $alt_text ? esc_attr($alt_text) : esc_attr(get_the_title()); ?>">
                     <?php }
 
                     ?>

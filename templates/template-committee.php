@@ -1,14 +1,14 @@
 <?php
 get_header();
 /**
- * Template Name: Template Committee
+ * Template Name: ম্যানেজিং কমিটি
  */
 
 ?>
 
 <!-- body start -->
 <div class="container bg-light py-3">
-
+<?php get_template_part('/parts/breadcumbs'); ?>
     <div class="committee-banner">
         <div class="text-center py-5 text-light banner-text">
             <h1>কমিটি ২০২৫</h1>

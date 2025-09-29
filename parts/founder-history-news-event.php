@@ -93,7 +93,36 @@
             <!-- নিউজ ও ইভেন্ট -->
             <div class="col-md-4 col-12">
                 <div class="sec-title bg-info text-center py-1 text-light mb-2">
-                    <p class="mb-0">নিউজ ও ইভেন্ট</p>
+
+                    <?php
+                    $original_id = 1;
+                    $category_id = intval(get_theme_mod("rjs_category_dropdown_{$original_id}"));
+                    if (empty($category_id)) {
+                        $category_id = 1;
+                    }
+
+                    $category_name = get_cat_name($category_id);
+                    $category_link = get_category_link($category_id);
+                    ?>
+
+                    <p class="mb-0">
+                        <a href="<?php echo esc_url($category_link); ?>"
+                            class="text-decoration-none text-white">
+                            <?php echo esc_html($category_name); ?>
+
+                            <!-- category No. On Off start -->
+                            <?php
+                            if (is_user_logged_in()) {
+                                $categoryOnOff = get_theme_mod('npa_category_switcher_id');
+                                if ('0' != $categoryOnOff) {
+                                    echo '<span class="text-danger"> ' . esc_html($original_id) . ' </span>';
+                                }
+                            }
+                            ?>
+                            <!-- category No. On Off end -->
+                        </a>
+                    </p>
+
                 </div>
 
 
@@ -102,7 +131,7 @@
                         <?php
                         $i = 0;
                         $news_and_event = new WP_Query(array(
-                            'cat'               => 22,
+                            'cat'               => $original_id,
                             'posts_per_page'    =>  10,
                             'order'             => 'DESC'
                         ));

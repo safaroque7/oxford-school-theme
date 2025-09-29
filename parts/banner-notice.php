@@ -1,7 +1,7 @@
 <div class="container bg-light">
     <!-- banner start -->
-    <section class="banner-section">
-        <div class="row py-3">
+    <section class="banner-section banner-section pt-md-4 pt-2">
+        <div class="row">
             <div class="col-md-8 col-12 mb-3">
                 <?php
                 //gallery part

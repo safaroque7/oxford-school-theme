@@ -5,6 +5,9 @@ include_once get_template_directory() . '/includes/helpers/after-setup-theme.php
 // customizer
 include_once get_template_directory() . '/includes/customizer/npa-customizer.php';
 
+// all-categories
+include_once get_template_directory() . '/includes/customizer/all-categories.php';
+
 //css and js file
 include_once get_template_directory() . '/includes/helpers/school-theme-css-js.php';
 

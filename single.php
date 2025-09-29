@@ -2,6 +2,7 @@
 
 <!-- body start -->
 <div class="container bg-light py-3 pb-3">
+    <?php get_template_part('includes/helpers/breadcumbs'); ?>
     <div class="row pb-5">
         <div class="col-lg-8">
             <?php

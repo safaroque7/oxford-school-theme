@@ -8,7 +8,7 @@
 <div class="container bg-light py-3">
     <?php get_template_part('includes/helpers/breadcumbs'); ?>
     <section class="banner-section">
-        <div class="row py-3">
+        <div class="row mb-md-4 mb-2">
             <div class="col-lg-8 mb-3">
                 <div class="row">
                     <div class="col-lg-6 mb-3">

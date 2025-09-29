@@ -1,4 +1,4 @@
-<div class="committee-banner">
+<div class="committee-banner mb-md-4 mb-2">
     <div class="text-center py-5 text-light banner-text">
         <h1>
             <?php

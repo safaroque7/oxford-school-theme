@@ -11,7 +11,7 @@
         </div>
     </div>
     <section class="banner-section">
-        <div class="row py-3">
+        <div class="row">
             <div class="col-lg-8 mb-3">
                 <div class="top-title bg-info text-center text-light py-1 mb-2">
                     <p class="mb-0">সব ছবি</p>

@@ -17,7 +17,7 @@ function notice_post_type()
         'show_ui'               => true,
         'capability_type'       => 'post',
         'hierarchical'          => true,
-        'supports'              => array('title'),
+        'supports'              => array('title', 'editor', 'thumbnail'),
     ));
 }
 add_action('init', 'notice_post_type');

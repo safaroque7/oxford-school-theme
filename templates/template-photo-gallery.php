@@ -6,28 +6,19 @@
 <!-- body start -->
 <div class="container bg-light py-3">
     <?php get_template_part('/parts/breadcumbs'); ?>
-    
-    <div class="committee-banner">
-        <div class="text-center py-5 text-light banner-text">
-            <h1>ফটো গ্যালারি</h1>
-        </div>
-    </div>
+
     <section class="banner-section">
         <div class="row">
             <div class="col-md-8 col-12 mb-3">
                 <div class="top-title bg-info text-center text-light py-1 mb-2">
-                    <p class="mb-0">সব ছবি</p>
+                    <p class="mb-0"> ফটো গ্যালারি </p>
                 </div>
-                <?php
-                //gallery part
-                get_template_part('parts/banner-slider');
-                ?>
                 <div class="all-photos mt-3">
                     <div class="gallery-wrap">
                         <div class="row" id="lightGallery">
                             <?php
                             $gallery = new WP_Query(array(
-                                'post_type' => 'gallery',
+                                'post_type' => 'photo_gallery',
                                 'order'     => 'DESC',
                             ));
                             while ($gallery->have_posts()): $gallery->the_post();
@@ -61,10 +52,6 @@
         </div>
     </section>
 
-    <?php
-    //gallery part
-    get_template_part('parts/gallery');
-    ?>
 </div>
 <!-- body end -->
 
